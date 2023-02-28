@@ -1,5 +1,8 @@
-FROM alpine:3.13
+FROM alpine:3.17
+
 LABEL maintainer="Alex Shamuel<theshamuel@gmail.com>"
+
+LABEL org.opencontainers.image.source https://github.com/theshamuel/baseimg-go-app
 
 ENV \
     TZ=UTC \
