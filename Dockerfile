@@ -1,4 +1,4 @@
-FROM alpine:3.21
+FROM alpine:3.22
 
 LABEL maintainer="Alex Shamuel<theshamuel@gmail.com>"
 
@@ -8,8 +8,8 @@ ENV \
     TZ=UTC \
     APP_USER=appuser \
     APP_UID=1001 \
-    DOCKER_GID=888    
-     
+    DOCKER_GID=888
+
 RUN apk add --no-cache --update tzdata su-exec curl ca-certificates && \
     ln -s /sbin/su-exec /usr/local/bin/gosu && \
     mkdir -p /home/$APP_USER && \
